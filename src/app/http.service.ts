@@ -26,4 +26,9 @@ export class HttpService {
   		return this.httpClient.post('https://api.sheety.co/4db58997dd33ab7eaa3d621c48bdea06/sewakereta/sheet1',body)
  
   }
+
+  deleteCar(id:String){
+  		return this.httpClient.delete(`https://api.sheety.co/4db58997dd33ab7eaa3d621c48bdea06/sewakereta/sheet1/${id}`)
+  }
+
 }
