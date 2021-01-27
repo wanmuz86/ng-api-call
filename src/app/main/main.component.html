@@ -1,0 +1,29 @@
+<div class="container my-5">
+
+	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Car Name</th>
+      <th scope="col">Owner Name</th>
+      <th scope="col">Plat No</th>
+      <th scope="col">Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of cars">
+      <th scope="row">{{car.id}}</th>
+      <td>{{car.name}}</td>
+      <td>{{car.owner}}</td>
+      <td>{{car.platno}}</td>
+      <td>
+      	<button type="button" class="btn btn-success" [routerLink]="['/detail',car.id]">View More</button>
+      	<button type="button" class="btn btn-primary" [routerLink]="['edit',car.id]">Edit</button>
+      	<button type="button" class="btn btn-danger">Delete</button>
+
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+</div>
