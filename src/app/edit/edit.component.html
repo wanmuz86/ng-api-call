@@ -1,30 +1,30 @@
-<div class="container my-5">
+<div class="container my-5" *ngIf="car">
 
-  <div class="form-group">
+  <div class="form-group" >
   	<h3>Edit car {{carId}}</h3>
     <label for="exampleInputEmail1">Car Name</label>
-    <input type="text" class="form-control" id="name" name="name" >
+    <input type="text" class="form-control" id="name" name="name" [(ngModel)]="car.name">
   </div>
   <div class="form-group">
     <label for="model">Model</label>
-    <input type="text" class="form-control" id="model" name="model">
+    <input type="text" class="form-control" id="model" name="model" [(ngModel)]="car.model">
   </div>
   <div class="row">
   <div class="form-group col-md-6 col-sm-12">
     <label for="price">Price</label>
-    <input type="text" class="form-control" id="price" name="price">
+    <input type="text" class="form-control" id="price" name="price" [(ngModel)]="car.price">
   </div>
    <div class="form-group col-md-6 col-sm-12">
     <label for="location">Plat No</label>
-    <input type="text" class="form-control" id="platno" name="platno">
+    <input type="text" class="form-control" id="platno" name="platno" [(ngModel)]="car.platno">
   </div>
   </div>
   <div class="form-group">
     <label for="location">Location</label>
-    <input type="text" class="form-control" id="location" name="location">
+    <input type="text" class="form-control" id="location" name="location" [(ngModel)]="car.location">
   </div>
  
  
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary" (click)="submitPressed()">Submit</button>
 
 </div>
